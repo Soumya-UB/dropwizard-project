@@ -39,7 +39,7 @@ public class TaskListResource {
 
         try {
             //Get processes from the terminal
-            Process p = Runtime.getRuntime().exec("tasklist");
+            Process p = Runtime.getRuntime().exec("ps -ef");
             BufferedReader input =
                     new BufferedReader(new InputStreamReader(p.getInputStream()));
             //Dropwizard comes with google guava
